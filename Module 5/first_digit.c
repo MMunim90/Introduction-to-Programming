@@ -1,11 +1,12 @@
 #include<stdio.h>
 int main()
 {
-    int n, div;
+    // input a number between 999>n<=9999
+    int n, first_number;
     scanf("%d", &n);
-    div = n/1000;
+    first_number = n/1000;
 
-    if(div%2 == 0)
+    if(first_number%2 == 0)
     {
         printf("EVEN");
     }
