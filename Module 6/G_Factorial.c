@@ -1,18 +1,17 @@
 #include<stdio.h>
 int main()
 {
-    int t,n;
-    long long int fact=1;
-    scanf("%d", &t);
+    long long int t, n, fact=1;
+    scanf("%lld", &t);
 
     for(int i=1; i<=t; i++)
     {
-        scanf("%d", &n);
+        scanf("%lld", &n);
         for(int j=1; j<=n; j++)
         {
             fact *= j;
         }
-        printf("%d\n", fact);
+        printf("%lld\n", fact);
         fact = 1;
     }
     return 0;
