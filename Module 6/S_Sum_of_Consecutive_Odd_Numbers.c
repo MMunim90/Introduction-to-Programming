@@ -1,43 +1,34 @@
+
 #include <stdio.h>
 int main()
 {
-    int x, y, odd = 0;
-    scanf("%d %d", &x, &y);
-
-    // for (int i = x; i >= y; i--)
-    // {
-    //     if (i % 2 == 1)
-    //     {
-    //         odd += i;
-    //     }
-    // }
-    // printf("%d", odd);
-
-    // if (x == y || x+1 == y || y+1 == x)
-    // {
-    //     printf("0\n");
-    // }
-    if(x > y)
+    int t;
+    scanf("%d", &t);
+    for (int j = 1; j <= t; j++)
     {
-        for(int i=x; i>=y; i--)
+        int x, b, sum = 0;
+        int start, end;
+        scanf("%d %d",&x ,&b);
+        if (x < b)
         {
-            if(i % 2 == 1)
+            start=x;
+            end = b;
+        }else
+        {
+            start = b;
+            end = x;
+        }
+        
+        for (int i = start+1; i < end ; i++)
+        {
+            if (i % 2 != 0)
             {
-                odd += i;
+                
+                sum = sum + i;
             }
         }
-        printf("%d", odd);
+        printf("%d\n", sum);
     }
-    else if(y > x)
-    {
-        for(int i=x; i<=y; i++)
-        {
-            if(i % 2 == 1)
-            {
-                odd += i;
-            }
-        }
-        printf("%d", odd);
-    }
+    
     return 0;
 }
