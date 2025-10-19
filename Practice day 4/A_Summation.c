@@ -1,19 +1,17 @@
 #include<stdio.h>
+#include<stdlib.h>
 int main()
 {
     int n;
     scanf("%d", &n);
     int arr[n];
+    long long int sum = 0;
     for(int i=0; i<n; i++)
     {
         scanf("%d", &arr[i]);
+        sum += arr[i];
     }
 
-    long long int sum = 0;
-    for(int j=0; j<n; j++)
-    {
-        sum += arr[j];
-    }
     sum = abs(sum);
     printf("%lld", sum);
 
