@@ -1,5 +1,1 @@
-M
-u
-n
-i
-m
+0 Hello
