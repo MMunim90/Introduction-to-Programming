@@ -2,9 +2,10 @@
 int main()
 {
     char string[10];
-    scanf("%s", &string);
-    // printf("%s ", string[5]);
-    printf("%s", string);
+    printf("%d\n", string[5]);
+    scanf("%s\n", &string);
+    printf("%s\n", string);
+    printf("%d\n", string[5]);
 
     return 0;
 }
