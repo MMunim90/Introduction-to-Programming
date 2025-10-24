@@ -2,7 +2,7 @@
 #include<string.h>
 int main()
 {
-    int ori[101], cpy[101];
+    char ori[101], cpy[101];
     scanf("%s %s", &cpy, &ori );
 
     strcpy(cpy, ori); //this function copy second and store the value to first;
