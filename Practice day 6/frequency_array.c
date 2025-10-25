@@ -16,10 +16,7 @@ int main()
         {
             count_0++;
         }
-        else if(arr[i] == 1)
-        {
-            count_1++;
-        }else if(arr[i] == 1)
+       else if(arr[i] == 1)
         {
             count_1++;
         }
