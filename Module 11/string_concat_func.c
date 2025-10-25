@@ -5,7 +5,7 @@ int main()
     char a[101], b[101];
     scanf("%s %s", &a, &b);
 
-    strcat(b,a); //this function copy the second string and stote it to the first.
+    strcat(b,a); //this function copy the second string and store it to the first.
 
     printf("%s %s", a, b);
     
