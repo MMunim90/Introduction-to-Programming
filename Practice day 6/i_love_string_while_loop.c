@@ -14,17 +14,6 @@ int main()
         int a_len = strlen(a);
         int b_len = strlen(b);
 
-        int min_len;
-
-        if (a_len > b_len)
-        {
-            min_len = b_len;
-        }
-        else
-        {
-            min_len = a_len;
-        }
-
         // for common part
         int i=0, j=0;
         while( i < a_len && j < b_len )
@@ -44,7 +33,7 @@ int main()
         // if b string is big
         while( j < b_len )
         {
-            printf("%c", b[i]);
+            printf("%c", b[j]);
             j++;
         }
         printf("\n");
