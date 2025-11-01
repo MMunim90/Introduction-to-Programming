@@ -1,35 +1,30 @@
-#include <stdio.h>
-#include <string.h>
+#include<stdio.h>
+#include<string.h>
 int main()
 {
-    char string[1001];
-    scanf("%s", string);
+    char word[80], reverse_word[80];
 
-    int size = strlen(string);
-    // printf("%c", string[0]);
-    // printf("%c", string[size-1]);
+    int i, j, len;
 
-    int i = 1;
-    int j = size;
-    // printf("%d %d", i, j);
-    // printf("%c %c", string[i], string[j]);
+    scanf("%s", word);
+    len = strlen(word);
 
-    while (i < j)
+    for(i=0, j=len-1; i<len; i++, j--)
     {
-        string[i] == string[j];
-        i++;
-        j--;
-        if(string[i] == string[j])
-        {
-            printf("YES");
-            return 0;
-        }
-        else
-        {
-            printf("NO");
-            return 0;
-        }
+        reverse_word[i] == word[j];
+    }
 
+    reverse_word[i] = '\0';
+
+    printf("%s\n", reverse_word);
+
+    if(0 == strcmp(word, reverse_word))
+    {
+        printf("YES");
+    }
+    else
+    {
+        printf("NO");
     }
 
     return 0;
