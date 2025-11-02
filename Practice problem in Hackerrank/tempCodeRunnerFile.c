@@ -1,4 +1,2 @@
-for(int j=n; j>i; j--)
-        // {
-        //     printf("%d", j);
-        // }
+
+        printf("YES");
