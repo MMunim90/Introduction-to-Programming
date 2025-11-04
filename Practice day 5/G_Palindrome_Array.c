@@ -1,67 +1,48 @@
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
     int n;
     scanf("%d", &n);
-    if (n == 1)
+
+    int org[n];
+    int copy[n];
+
+    for(int i=0; i<n; i++)
+    {
+        scanf("%d", &org[i]);
+        copy[i] = org[i];
+    }
+
+    int left = 0, right = n - 1;
+
+    while (left < right)
+    {
+        copy[left] = copy[left] + copy[right];
+        copy[right] = copy[left] - copy[right];
+        copy[left] = copy[left] - copy[right];
+
+        left++;
+        right--;
+    }
+
+    int flag = 1;
+    for(int i=0; i<n; i++)
+    {
+        if(copy[i] != org[i])
+        {
+            flag = 0;
+            break;
+        }
+    }
+
+    if(flag)
     {
         printf("YES");
-        return 0;
     }
-    long long int arr[n];
-    for (int i = 0; i < n; i++)
+    else
     {
-        scanf("%lld", &arr[i]);
+        printf("NO");
     }
-
-    // printf("%d", original);
-
-    // int original, reverse;
-
-    // for (int i = 0; i < n; i++)
-    // {
-    //         // printf("%d ", arr[i]);
-    //     original = arr[i];
-    // }
-
-    // // printf("\n");
-
-    // for (int j = n-1; j >= 0; j--)
-    // {
-    //     // printf("%d ", arr[j]);
-    //     reverse = arr[j];
-    // }
-
-    //     if(original == reverse)
-    //     {
-    //         printf("YES");
-    //     }
-    //     else
-    //     {
-    //         printf("NO");
-    //     }
-
-    //<---------------->
-    int i = 0;
-    int j = n - 1;
-
-    while (i < j)
-    {
-        arr[i] == arr[j];
-        i++;
-        j--;
-
-        if (arr[i] == arr[j])
-        {
-            printf("YES");
-            break;
-        }
-        else
-        {
-            printf("NO");
-            break;
-        }
-    }
-
+    
     return 0;
 }
