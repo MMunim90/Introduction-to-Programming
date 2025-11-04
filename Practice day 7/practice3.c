@@ -1,3 +1,5 @@
+//  return + parameter
+
 #include<stdio.h>
 
 int char_to_ascii(char a)

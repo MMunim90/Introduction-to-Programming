@@ -1,16 +1,18 @@
+// no return + parameter
+
 #include<stdio.h>
 
-char small_to_capital(char a)
+void small_to_capital(char a)
 {
     char swap = a - 32;
-    return swap;
+    printf("%c", swap);
 }
 
 int main()
 {
     char x;
     scanf("%c", &x);
-    char result = small_to_capital(x);
-    printf("%c", result);
+    small_to_capital(x);
+    
     return 0;
 }
