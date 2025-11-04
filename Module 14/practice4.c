@@ -1,9 +1,12 @@
-// no return + parameter
+// no return + no parameter
 
 #include<stdio.h>
 
-void func3(int n)
+void func3()
 {
+    int n;
+    scanf("%d", &n);
+
     int res = 0;
 
     if(n % 2 == 0)
@@ -27,10 +30,7 @@ void func3(int n)
 
 int main()
 {
-    int n;
-    scanf("%d", &n);
-
-    func3(n);
+    func3();
 
     return 0;
 }
