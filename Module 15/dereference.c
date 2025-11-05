@@ -3,13 +3,12 @@ int main()
 {
     int x = 1000;
     printf("%d\n", x);
-    printf("%p\n", &x);
 
     int* ptr;
     ptr = &x;
 
-    printf("%p\n", ptr);
-    printf("%p\n", &ptr);
     printf("%d\n", *ptr);
+    *ptr = 200;
+    printf("%d\n", x);
     return 0;
 }
