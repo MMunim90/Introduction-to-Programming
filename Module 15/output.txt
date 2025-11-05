@@ -1,2 +1,4 @@
+value of fun function x : 0061FF1C
 Address of fun function x : 0061FF00
+20
 Address of main function x : 0061FF1C
