@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int swaping(int* x, int* y)
+void swaping(int* x, int* y)
 {
     int temp = *x;
     *x = *y;
