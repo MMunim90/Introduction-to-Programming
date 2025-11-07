@@ -5,8 +5,8 @@ int main()
     scanf("%d", &n);
 
     int hash = 1;
-    int gap = n-1;
-    int hash2 = (n * 2) - 1;
+    int gap = n - 1;
+    int hash2 = (n * 2) - 3;
     int gap2 = 1;
 
     for (int i = 1; i <= n; i++)
@@ -18,13 +18,13 @@ int main()
 
         for (int j = 1; j <= hash; j++)
         {
-            if (i % 2 == 0)
+            if (i % 2 == 1)
             {
-                printf("-");
+                printf("#");
             }
             else
             {
-                printf("#");
+                printf("-");
             }
         }
 
@@ -42,19 +42,33 @@ int main()
 
         for (int j = 1; j <= hash2; j++)
         {
-            if (i % 2 == 0)
+            if (n % 2 == 1)
             {
-                printf("#");
+                if (i % 2 == 1)
+                {
+                    printf("-");
+                }
+                else
+                {
+                    printf("#");
+                }
             }
-            else
+            else if (n % 2 == 0)
             {
-                printf("-");
+                if (i % 2 == 1)
+                {
+                    printf("#");
+                }
+                else
+                {
+                    printf("-");
+                }
             }
         }
 
         printf("\n");
         gap2++;
-        hash2 -=2;
+        hash2 -= 2;
     }
 
     return 0;
