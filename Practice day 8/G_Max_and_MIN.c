@@ -1,30 +1,21 @@
 #include <stdio.h>
-#include <limits.h>
 
 void find_min_max(int arr[], int n)
 {
-
-    int min = INT_MIN;
-    int max = INT_MAX;
-
-    for (int i = 0; i < n; i++)
+    for (int i=0; i<n-1; i++)
     {
-        // if(arr[i+1] >= arr[i])
-        // {
-        //     min = arr[i];
-        // }
-        // else if(arr[i+1] < arr[i])
-        // {
-        //     max = arr[i];
-        // }
+        for(int j=i+1; j<n; j++)
+        {
+            if(arr[i] > arr[j])
+            {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
     }
 
-    // for(int i=0; i<n; i++)
-    // {
-    //     printf("%d ", arr[i]);
-    // }
-
-    // printf("%d %d", min, max);
+    printf("%d %d", arr[0], arr[n-1]);
 }
 
 int main()
