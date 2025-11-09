@@ -2,7 +2,7 @@
 
 void recursive(int n)
 {
-    if(n == 10)  // end condition
+    if(n == 10)  // end condition,  name is base case
     {
         return;
     }
