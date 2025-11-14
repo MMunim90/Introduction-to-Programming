@@ -8,8 +8,8 @@ void factorial(long long int arr[], int n, long long int fact)
         return;
     }
     
-    fact = fact * n;
-    factorial(arr, n-1, fact);
+    // fact = fact * n;
+    factorial(arr, n-1, fact*n);
 
 }
 
