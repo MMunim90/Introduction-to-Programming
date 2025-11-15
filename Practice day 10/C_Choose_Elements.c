@@ -27,16 +27,13 @@ int main()
 
     for (int i = 0; i < k; i++)
     {
-        total_sum += arr[i];
+        if (arr[i] >= 0)
+        {
+            total_sum += arr[i];
+        }
     }
 
-    if (total_sum > 0)
-    {
-        printf("%lld", total_sum);
-    }
-    else
-    {
-        printf("0");
-    }
+    printf("%lld", total_sum);
+
     return 0;
 }
