@@ -10,9 +10,13 @@ int main()
     
     for(int i=1; i<=n; i++)
     {
-        for(int j=x; j<pow(x, 3); j*=x)
+        int cubic = pow(x,3);
+        for(int j=x; j<=cubic; j++)
         {
-            printf("%d ", j);
+            if(j % x == 0)
+            {
+                printf("%d ", j);
+            }
         }
         printf("\n");
         x++;
