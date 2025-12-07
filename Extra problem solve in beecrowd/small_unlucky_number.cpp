@@ -5,12 +5,9 @@ int main()
     long long int n;
     cin >> n;
 
-    for(int i=0; i<n-1; i++)
+    for(int i=0; i<n; i++)
     {
-        for(int j=i+1; j<n; j++)
-        {
-            cout << n;
-        }
+        cout << i << " ";
     }
     return 0;
 }
