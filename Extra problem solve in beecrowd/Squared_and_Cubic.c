@@ -5,21 +5,9 @@ int main()
     int n;
     scanf("%d", &n);
 
-    
-    int x = 1;
-    
     for(int i=1; i<=n; i++)
     {
-        int cubic = pow(x,3);
-        for(int j=x; j<=cubic; j++)
-        {
-            if(j % x == 0)
-            {
-                printf("%d ", j);
-            }
-        }
-        printf("\n");
-        x++;
+        printf("%d %d %d\n", i, i*i, i*i*i);
     }
     return 0;
 }
