@@ -1,13 +1,24 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
-    long long int n;
-    cin >> n;
+    string s;
+    cin >> s;
 
-    for(int i=0; i<n; i++)
+    bool found = false;
+
+    for (int i = 0; i < s.size(); i++)
     {
-        cout << i << " ";
+        if (s[i] == '1' && s[i + 1] == '3')
+        {
+            cout << s << " es de Mala Suerte" << endl;
+            found = true;
+            break;
+        }
     }
+
+    if (!found)
+        cout << s << " NO es de Mala Suerte" << endl;
+
     return 0;
 }
